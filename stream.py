@@ -4,6 +4,14 @@ from PIL import Image
 from keras.models import load_model
 from keras.preprocessing.image import load_img,img_to_array
 from keras.applications.vgg16 import VGG16,preprocess_input,decode_predictions
+uploaded=st.file_uploader('Choose the image')
+if uploaded is not None:
+    image=Image.open(uploaded)
+    st.image(image,caption='Image uploaded',use_column_width=True)
+    st.write('Classifying')
+    label=prediction1(uploaded)
+    st.write(label)
+
 def prediction1(img_file):
     model=VGG16()
     image=load_img(img_file,target_size=(150,150))
@@ -13,11 +21,3 @@ def prediction1(img_file):
     label=decode_prediction(label)
     label=label[0][0]
     return label
-uploaded=st.file_uploader('Choose the image')
-if uploaded is not None:
-    image=Image.open(uploaded)
-    st.image(image,caption='Image uploaded',use_column_width=True)
-    st.write('Classifying')
-    label=prediction1(uploaded)
-    st.write(label)
-
