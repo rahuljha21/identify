@@ -3,7 +3,7 @@ import keras as keras
 from PIL import Image
 from keras.models import load_model
 from keras.preprocessing.image import load_img,img_to_array
-from keras.applications.vgg16 import VGG16,preprocess_input,decode_predictionsS
+from keras.applications.vgg16 import VGG16,preprocess_input,decode_predictions
 def prediction1(img_file):
     model=VGG16()
     image=load_img(img_file,target_size=(150,150))
