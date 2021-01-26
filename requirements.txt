@@ -1,6 +1,6 @@
 numpy==1.16.4
 tornado>=6.1
-tensorflow==2.0.0
+tensorflow>=2.0.0
 pandas
 streamlit
 pillow
