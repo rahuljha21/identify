@@ -5,9 +5,9 @@ from keras.preprocessing.image import load_img,img_to_array
 from keras.applications.vgg16 import VGG16,preprocess_input,decode_predictions
 def prediction1(img_file):
     model=VGG16()
-    image=load_img(img_file,target_size=(224,224))
+    image=keras.preprocessing.image.load_img(img_file,target_size=(224,224))
     image=img_to_array(image)
-    image=image.reshape((1,224,224,3))
+    image=image.reshape(1,224,224,3)
     image=preprocess_input(image)
     label=model.predict(image)
     label=decode_prediction(label)
