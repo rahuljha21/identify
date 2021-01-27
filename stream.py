@@ -9,7 +9,7 @@ from keras.applications.vgg16 import decode_predictions
 
 
 st.set_option('deprecation.showfileUploaderEncoding',False)
-@st.cache(allow_output_mutation=True)
+
 model=VGG16()
 uploaded=st.file_uploader('Choose the image')
 if uploaded is not None:
