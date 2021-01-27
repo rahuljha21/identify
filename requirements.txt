@@ -1,7 +1,7 @@
+pip>=21.0.0
 numpy==1.16.4
 tornado>=6.1
 tensorflow>=2.0.0
-pip>=21.0.0
 pandas
 streamlit
 pillow
