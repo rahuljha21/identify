@@ -1,8 +1,11 @@
 import streamlit as st
 import keras as keras
 from PIL import Image
-from keras.preprocessing.image import load_img,img_to_array
-from keras.applications.vgg16 import VGG16,preprocess_input,decode_predictions
+from keras.preprocessing.image import load_img
+from keras.preprocessing.image import img_to_array
+from keras.applications.vgg16 import VGG16
+from keras.applications.vgg16 import preprocess_input
+from keras.applications.vgg16 import decode_predictions
 
 
 st.set_option('deprecation.showfileUploaderEncoding',False)
